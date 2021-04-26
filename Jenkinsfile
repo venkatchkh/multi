@@ -10,7 +10,7 @@ node('master')
        }
     stage('continous Deployment_master') 
        {
-    sh 'scp /home/ubuntu/.jenkins/workspace/jobm/webapp/target/webapp.war ubuntu@172.31.47.170:/var/lib/tomcat9/webapps/qaenv.war'
+    sh 'scp /home/ubuntu/.jenkins/workspace/jobm_master/webapp/target/webapp.war ubuntu@172.31.47.170:/var/lib/tomcat9/webapps/qaenv.war'
        }
     stage('continous Testing_master') 
        {
@@ -18,6 +18,6 @@ node('master')
        }
     stage('continous Delivery_master') 
        {
-    sh 'scp /home/ubuntu/.jenkins/workspace/jobm/webapp/target/webapp.war ubuntu@172.31.34.123:/var/lib/tomcat9/webapps/prodenv.war'
+    sh 'scp /home/ubuntu/.jenkins/workspace/jobm_master/webapp/target/webapp.war ubuntu@172.31.34.123:/var/lib/tomcat9/webapps/prodenv.war'
        }
 }
